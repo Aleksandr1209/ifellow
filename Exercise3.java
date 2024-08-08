@@ -10,17 +10,14 @@ public class Exercise3 {
         double toConvert = sc.nextDouble();
         System.out.println("Выберите конвертацию(1 - в Фаренгейты, 2 - в Кельвины): ");
         int choice = sc.nextInt();
-        if (choice < 1 || choice > 2) {
-            System.out.println("Введено некорректнное значение типа конвертации!");
-        }
-        else {
-            toConvert = bc.convert(toConvert, choice);
-            if(choice == 1){
+        toConvert = bc.convert(toConvert, choice);
+        switch(choice){
+            case 1:
                 System.out.println("Конвертированное значение: " + toConvert + " F");
-            }
-            else {
+                break;
+            case 2:
                 System.out.println("Конвертированное значение: " + toConvert + " K");
-            }
+                break;
         }
     }
 }

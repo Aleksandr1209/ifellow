@@ -2,11 +2,14 @@ package Classes;
 
 public class BaseConvert {
     public double convert(double toConvert, int choice){
-        if(choice == 1){
-            toConvert = (toConvert * 9 / 5) + 32;
-        } else if(choice == 2){
-            toConvert = toConvert + 273.15;
+        switch (choice){
+            case 1:
+                return toConvert * 9 / 5 + 32;
+            case 2:
+                return toConvert + 273.15;
+            default:
+                System.out.println("Неверный выбор");
+                return 0.0;
         }
-        return toConvert;
     }
 }

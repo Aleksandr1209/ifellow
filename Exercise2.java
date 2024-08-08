@@ -1,6 +1,7 @@
 public class Exercise2 {
     public static void main(String[] args) {
         String text = "Hello";
+        System.out.println("Строка = " + text);
         int len = 128;
         int[] arr = new int[len];
         for (int i = 0; i < text.length(); i++) {
